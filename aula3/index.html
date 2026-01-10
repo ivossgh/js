@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Devocional</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Meu Devocional</h1>
+
+    <!-- Área de edição -->
+    <section class="editor">
+      <label for="tipoBloco">Tipo de bloco</label>
+      <select id="tipoBloco">
+        <option value="titulo">Título</option>
+        <option value="paragrafo">Parágrafo</option>
+        <option value="citacao">Citação</option>
+        <option value="lista">Lista</option>
+      </select>
+
+      <label for="conteudoBloco">Conteúdo</label>
+      <textarea
+        id="conteudoBloco"
+        placeholder="Digite seu texto..."
+      ></textarea>
+
+      <button onclick="adicionarBloco()">Adicionar bloco</button>
+    </section>
+
+    <hr>
+
+    <!-- Preview da anotação -->
+    <section class="preview-area">
+      <h2>Pré-visualização</h2>
+      <div id="preview"></div>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f0ea;
+  color: #2f2f2f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+/* Container principal */
+.container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #3a2e25;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  color: #3a2e25;
+}
+
+/* Formulário */
+select,
+textarea,
+button {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Select e textarea */
+select,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cfc7bd;
+  background-color: #fafafa;
+}
+
+/* Textarea */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botão */
+button {
+  background-color: #6b4f3f;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8b6a55;
+}
+
+/* Separador */
+hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Preview da anotação */
+#preview {
+  margin-top: 20px;
+}
+
+/* Blocos renderizados */
+#preview p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+#preview blockquote {
+  margin: 15px 0;
+  padding: 10px 15px;
+  border-left: 4px solid #6b4f3f;
+  background-color: #f9f6f3;
+  font-style: italic;
+}
+
+#preview li {
+  margin-left: 20px;
+  list-style: disc;
+}
