@@ -1,0 +1,82 @@
+/* Configurações Gerais - Janeiro 2026 */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Estilização do Campo de Entrada */
+#entrada {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+#entrada:focus {
+    border-color: #4a90e2; /* Cor azul ao clicar */
+}
+
+/* Botão Salvar */
+#salvar {
+    width: 100%;
+    max-width: 430px;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#salvar:hover {
+    background-color: #357abd;
+}
+
+/* Estilização da Lista de Reflexões */
+#lista {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 430px;
+    margin-top: 30px;
+}
+
+#lista li {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid #4a90e2; /* Detalhe lateral */
+    word-wrap: break-word; /* Evita que textos longos quebrem o layout */
+}
+
+/* Botão Limpar */
+#limpar {
+    margin-top: 20px;
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+#limpar:hover {
+    background: #e74c3c;
+    color: white;
+}
