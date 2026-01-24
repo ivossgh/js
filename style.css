@@ -1,0 +1,24 @@
+/* Menu escondido por padrão */
+#menu-comandos {
+    display: none; 
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 5px;
+}
+
+/* Opções dentro do menu */
+.item-menu {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 4px;
+}
+
+.item-menu:hover {
+    background-color: #f0f7ff;
+    color: #007bff;
+}

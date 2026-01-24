@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Notes</title>
+  <link rel="stylesheet" href="oficial.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="editor-page">
+
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <a href="#"><i class="fa-solid fa-book"></i> Your Notes </a>
+      </div>
+      
+      <div class="header-right">
+        <span class="shimmer" style="font-size: 0.8rem; margin-right: 10px;">Autosalvamento ativado</span>
+        <button id="theme-toggle" class="btn-modern" style="padding: 0.5rem 1rem;">🌓 Tema</button>
+        <div class="user-avatar">I</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="editor-container">
+    <div id="editor">
+      <div class="block" data-type="paragraph" contenteditable="true" data-placeholder="Comece a escrever ou digite '.' para comandos..."></div>
+    </div>
+  </main>
+
+  <div id="command-menu" hidden>
+    <div class="menu-item" data-command="heading-1">Título 1</div>
+    <div class="menu-item" data-command="heading-2">Título 2</div>
+    <div class="menu-item" data-command="paragraph">Parágrafo</div>
+    <div class="menu-item" data-command="list">Lista</div>
+    <div class="menu-item" data-command="quote">Citação</div>
+    <div class="menu-item" data-command="code">Código</div>
+    <div class="menu-item" data-command="divider">Divisor</div>
+    <div class="menu-item" data-command="image">Imagem</div>
+  </div>
+
+  <footer class="editor-footer">
+    <div class="container">
+      <p><strong>Your Notes</strong> © 2026 — Construindo hábitos saudáveis</p>
+    </div>
+  </footer>
+
+  <script src="oficial.js"></script>
+</body>
+</html>

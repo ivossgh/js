@@ -1,0 +1,85 @@
+<!-- Declara que este documento é do tipo HTML5 -->
+<!DOCTYPE html> 
+<!-- Inicia o documento HTML e define o idioma como Português do Brasil -->
+<html lang="pt-BR"> 
+<!-- Cabeçalho do site: contém informações técnicas não visíveis para o usuário -->
+    <head> 
+<!-- Define a codificação de caracteres para aceitar acentos e símbolos -->
+        <meta charset="UTF-8"> 
+<!-- Conecta o arquivo de estilos CSS para dar visual ao editor -->
+        <link rel="stylesheet" href="style.css">
+<!-- Define o título que aparece na aba do navegador -->
+        <title>Your Notes</title> 
+    </head>
+<!-- Inicia o corpo da página, onde fica todo o conteúdo visível -->
+    <body> 
+<!-- Divisor principal que agrupa todo o editor para facilitar o layout -->
+        <div class="container"> 
+<!-- Agrupa a barra de ferramentas (botões e menus) -->
+            <div class="toolbar"> 
+<!-- Título principal do aplicativo na tela -->
+                <h1>Editor de Texto</h1> 
+<!-- Sub-divisão para organizar os campos de entrada e seleções superiores -->
+                <div class="head"> 
+<!-- Campo de texto para o usuário digitar o nome que deseja dar ao arquivo -->
+                    <input type="text" placeholder="Nome do arquivo" value="" id="filename">
+
+<!-- Menu suspenso para ações relacionadas ao gerenciamento de arquivos -->
+                    <select>
+                        <option value="" selected disabled hidden>Arquivo</option> <!-- Rótulo padrão do menu -->
+                        <option value="novo">Novo Arquivo</option> <!-- Opção para criar o arquivo -->
+                        <option value="txt">Salvar como arquivo TXT</option> <!-- Opção para baixar em texto puro -->
+                        <option value="pdf">Salvar como arquivo PDF</option> <!-- Opção para exportar em PDF -->
+                    </select>
+
+<!-- Menu para aplicar estilos de blocos de texto (tags HTML estruturais) -->
+                    <select>
+                        <option value="" selected disabled hidden>Formato</option> <!-- Rótulo padrão -->
+                        <option value="h1">Titulo 1</option> <!-- Define o texto como título principal -->
+                        <option value="h2">Titulo 2</option> <!-- Define como título secundário -->
+                        <option value="h3">Titulo 3</option> <!-- Define como título de terceiro nível -->
+                        <option value="p">Paragrafo</option> <!-- Define como texto comum (parágrafo) -->
+                        <option value="ul">Lista</option> <!-- Opção para criar listas (geralmente via JS) -->
+                        <option value="blockquote">Citação</option> <!-- Formata o texto como um bloco de citação -->
+                    </select>
+
+<!-- Menu para alterar visualmente o tamanho da fonte do texto selecionado -->
+                    <select>
+                        <option value="" selected disabled hidden>Tamanho da Fonte</option> <!-- Rótulo padrão -->
+                        <option value="p">Pequeno</option> <!-- Opção para fonte menor -->
+                        <option value="m">Medio</option> <!-- Opção para fonte padrão -->
+                        <option value="g">Grande</option> <!-- Opção para fonte maior -->
+                    </select>
+<!-- Agrupamento específico para os botões de formatação rápida -->
+                    <div class="btn-toolbar"> 
+<!-- Botões que chamam a função formatDoc no JavaScript passando o comando desejado -->
+                        <button onclick="formatDoc('bold')">B</button> <!-- Botão de Negrito -->
+                        <button onclick="formatDoc('italic')">I</button> <!-- Botão de Itálico -->
+                        <button onclick="formatDoc('underline')">U</button> <!-- Botão de Sublinhado -->
+                        <button onclick="formatDoc('justifyLeft')">L</button> <!-- Alinhamento à Esquerda -->
+                        <button onclick="formatDoc('justifyCenter')">C</button> <!-- Alinhamento Centralizado -->
+                        <button onclick="formatDoc('justifyRight')">R</button> <!-- Alinhamento à Direita -->
+                        <button onclick="formatDoc('justifyFull')">J</button> <!-- Alinhamento Justificado -->
+                        <button onclick="formatDoc('insertOrderedList')">OL</button> <!-- Lista Numerada -->
+                        <button onclick="formatDoc('insertUnorderedList')">UL</button> <!-- Lista com Marcadores -->
+                        <button onclick="formatDoc('strikeThrough')">S</button> <!-- Texto Tachado (riscado) -->
+                    </div>
+                </div>
+
+<!-- Área principal de digitação: 'contenteditable="true"' permite que o usuário escreva nesta DIV -->
+                <div id="content" class="content" contenteditable="true" spellcheck="true">Digite seu texto</div>
+                <div id="status"></div>
+
+                <h2>Anotações</h2>
+                <div id="historico" class="historico"></div>
+                
+<!-- Botão final para disparar a ação de salvar o que foi escrito -->
+                <button id="semelhanca">Verificar Semelhança</button>
+                <button id="btn-save" class="btn-save">Salvar Anotação</button>
+            </div>
+        </div>
+
+<!-- Importa o arquivo de lógica JavaScript; deve estar no final para garantir que o HTML já carregou -->
+        <script src="editor.js"></script>
+    </body>
+</html>

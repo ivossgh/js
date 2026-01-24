@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Devocional</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        p[contenteditable="true"] {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            min-height: 1.2em;
+            border-radius: 4px;
+            outline: none;
+        }
+        p[contenteditable="true"]:focus {
+            border-color: #ffffff;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>New Post</h1>
+     
+    <p id="mensagem"></p>
+    <script src="principal.js"></script>
+    
+    <button id="salvar">Salvar Anotação</button> 
+</body>
+
+</html>

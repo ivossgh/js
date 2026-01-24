@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Eventos - Módulo 4</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        p[contenteditable="true"] {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            min-height: 1.2em;
+            border-radius: 4px;
+            outline: none;
+        }
+        p[contenteditable="true"]:focus {
+            border-color: #ffffff;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Editor de Notas Dinâmico</h1>
+    <p>Pressione <strong>ENTER</strong> para criar um novo parágrafo. Clique fora para remover se estiver vazio.</p>
+     <button id="salvar">Salvar no Banco</button> 
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

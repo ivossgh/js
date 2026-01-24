@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devocionais | Editor Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #espaco-do-editor {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            min-height: 400px; /* Garante área visível mesmo vazio */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="salvar">Salvar Anotação</button>
+        <button id="limpar">Apagar Anotações</button>
+    </header>
+
+    <main id="espaco-do-editor">
+        <!-- O editor será inserido aqui pelo script -->
+    </main>
+    
+    <!-- Menu de comandos estilo Notion -->
+    <div id="menu-comandos" role="menu" aria-hidden="true">
+        <div class="item-menu" data-tipo="h1" tabindex="0"><b>H1</b> Título</div>
+        <div class="item-menu" data-tipo="p" tabindex="0"><b>P</b> Parágrafo</div>
+        <div class="item-menu" data-tipo="blockquote" tabindex="0"><b>"</b> Citação</div>
+    </div>
+
+    <script src="editor.js"></script>
+</body>
+</html>
