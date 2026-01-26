@@ -1,0 +1,183 @@
+/* ===== VARIÁVEIS E TEMA (MANTIDOS) ===== */
+:root {
+  --bg-color: #201f1f;
+  --text-color: #e6e6e6;
+  --text-heading: #ffffff;
+  --text-muted: #9b9b9b;
+  --block-hover: rgba(255, 255, 255, 0.03);
+  --menu-bg: #1a1a1a;
+  --menu-border: #333;
+  --quote-border: #373737;
+  --code-bg: #1a1a1a;
+  --divider-color: #333;
+  --header-height: 70px; /* Nova variável para controle */
+}
+
+body.light-mode {
+  --bg-color: #f5f5f5; /* Ajustado para um cinza bem claro */
+  --text-color: #222222;
+  --text-heading: #000000;
+  --text-muted: #666666;
+  --block-hover: rgba(0, 0, 0, 0.04);
+  --menu-bg: #ffffff;
+  --menu-border: #e0e0e0;
+  --quote-border: #e0e0e0;
+  --code-bg: #f5f5f5;
+  --divider-color: #eeeeee;
+}
+
+/* ===== LAYOUT DO APP ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* ===== HEADER ESTILIZADO ===== */
+header {
+  height: var(--header-height);
+  background-color: var(--menu-bg);
+  border-bottom: 1px solid var(--menu-border);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 24px;
+}
+
+header .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left a {
+  font-weight: 700;
+  color: var(--text-heading);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Reestilizando seu botão de tema para o header */
+#theme-toggle {
+  padding: 6px 14px;
+  cursor: pointer;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--menu-border);
+  border-radius: 12px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+#theme-toggle:hover {
+  background: var(--block-hover);
+}
+
+/* ===== ÁREA DO EDITOR ===== */
+.editor-container {
+  flex: 1; /* Empurra o footer para baixo */
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+#editor {
+  width: 100%;
+  max-width: 800px; /* Largura focada para escrita */
+  min-height: 60vh;
+  background-color: transparent; /* O fundo vem do body */
+}
+
+/* ===== FOOTER MINIMALISTA ===== */
+.editor-footer {
+  padding: 30px 24px;
+  text-align: center;
+  border-top: 1px solid var(--divider-color);
+  background-color: var(--menu-bg);
+}
+
+.editor-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ===== BLOCOS (MANTIDOS COM PEQUENOS AJUSTES) ===== */
+.block {
+  min-height: 1.6em;
+  padding: 4px 10px;
+  outline: none;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.block:hover, .block:focus {
+  background-color: var(--block-hover);
+}
+
+/* Estilo do Placeholder (Dica visual) */
+.block:empty:before {
+  content: attr(data-placeholder);
+  color: var(--text-muted);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ===== MENU DE COMANDO (AJUSTE DE POSIÇÃO) ===== */
+#command-menu {
+  position: absolute;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 8px;
+  padding: 8px;
+  width: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 2000;
+}
+
+.menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background-color: var(--block-hover);
+}
+/* Garante que a lista tenha recuo e mostre os marcadores */
+ul.block {
+    padding-left: 25px; /* Espaço para as bolinhas */
+    list-style-type: disc; /* Garante que as bolinhas apareçam */
+}
+
+li {
+    margin-bottom: 5px;
+    outline: none; /* Remove a borda azul ao clicar no item */
+}
+/* Mantém os espaços e tabs visíveis e preservados */
+.block[data-type="code"] {
+    white-space: pre-wrap;
+    font-family: monospace;
+}

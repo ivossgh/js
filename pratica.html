@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Notes</title>
+    <link rel="stylesheet" href="pratica.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="editor-page">
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="#"><i class="fa-solid fa-book"></i> Your notes </a>
+            </div>
+
+            <div class="header-right">
+                <span class="shimmer" style="font-size: 0.8rem; margin-right: 10px;">Salvamento Automatico</span>
+                <button id="theme-toggle" class="btn-modern" style="padding: 0.5rem 1rem;">🌓 Tema</button>
+                <div class="user-avatar">I</div>
+            </div>
+
+            <!--<div>
+                <button id="focus-toggle" class="btn-modern" style="padding: 0.5rem 1rem; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">🎯 Modo Foco</button>
+            </div>
+            <!-->
+        </div>
+    </header>
+
+    <main class="editor-container">
+        <div id="editor">
+            <div class="block" data-type="paragraph" contenteditable="true" data-placeholder="Comece suas anotações ou digite '.' para comandos..."></div>
+        </div>
+    </main>
+
+    <div id="command-menu">
+        <div class="menu-item" data-command="heading-1">Título 1</div>
+        <div class="menu-item" data-command="heading-2">Título 2</div>
+        <div class="menu-item" data-command="paragraph">Parágrafo</div>
+        <div class="menu-item" data-command="list">Lista</div>
+        <div class="menu-item" data-command="quote">Citação</div>
+        <div class="menu-item" data-command="code">Código</div>
+        <div class="menu-item" data-command="divider">Divisão</div>
+        <div class="menu-item" data-command="image">Imagem</div>
+    </div>
+
+    <footer class="editor-footer">
+        <div class="container">
+            <p><strong>Your Notes</strong> © 2026 — Construindo hábitos saudáveis </p>
+        </div>
+    </footer>
+    <script src="pratica.js"></script>
+</body>
+</html>
