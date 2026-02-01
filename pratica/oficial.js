@@ -214,20 +214,20 @@ function navigateDown(event, block) {
     next.focus();
   }
 }
-const themeToggle = document.getElementById("theme-toggle");
+const seletor = document.getElementById("seletorTema");
 
-// Verifica se o usuário já tinha uma preferência salva
-if (localStorage.getItem("theme") === "light") {
-  document.body.classList.add("light-mode");
-}
+// Função para aplicar o tema
+const aplicarTema = (tema) => {
+  document.body.setAttribute("data-theme", tema);
+  localStorage.setItem("tema_escolhido", tema);
+};
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light-mode");
-  
-  // Salva a preferência
-  if (document.body.classList.contains("light-mode")) {
-    localStorage.setItem("theme", "light");
-  } else {
-    localStorage.setItem("theme", "dark");
-  }
+// Carrega o tema salvo ou usa o 'nord' como padrão
+const temaSalvo = localStorage.getItem("tema_escolhido") || "nord";
+aplicarTema(temaSalvo);
+seletor.value = temaSalvo;
+
+// Ouvinte de mudança
+seletor.addEventListener("change", (e) => {
+  aplicarTema(e.target.value);
 });

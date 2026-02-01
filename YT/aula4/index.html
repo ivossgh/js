@@ -3,19 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Tarefas</title>
+  <title>Cadastro de Usuarios</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Lista de Tarefas</h1>
-    <p>Adicione suas tarefas!</p>
+    <h1>Cadastro de Funcionários</h1>
     
-    <input type="text" id="inputTarefa" placeholder="Digite a sua Tarefa">
-    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
-    
+    <div class="formulario">
+      <input type="text" id="inputNome" placeholder="Nome Completo">
+      <input type="text" id="inputEndereco" placeholder="Endereço (Rua, Nº)">
+      <input type="tel" id="inputTelefone" placeholder="Telefone (00) 00000-0000">
+      <button onclick="adicionarFuncionario()">Cadastrar</button>
+    </div>
+
     <p id="mensagem"></p>
-    <ul id="listaTarefas"></ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela">
+        </tbody>
+    </table>
   </div>
 
   <script src="editor.js"></script>

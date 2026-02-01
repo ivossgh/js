@@ -1,30 +1,84 @@
 /* ===== VARIÁVEIS E TEMA (MANTIDOS) ===== */
+/* Cores padrão (Dark) */
 :root {
-  --bg-color: #201f1f;
-  --text-color: #e6e6e6;
-  --text-heading: #ffffff;
-  --text-muted: #9b9b9b;
-  --block-hover: rgba(255, 255, 255, 0.03);
-  --menu-bg: #1a1a1a;
-  --menu-border: #333;
-  --quote-border: #373737;
-  --code-bg: #1a1a1a;
-  --divider-color: #333;
-  --header-height: 70px; /* Nova variável para controle */
+  --bg-color: #121212;
+  --text-color: #ffffff;
 }
 
-body.light-mode {
-  --bg-color: #f5f5f5; /* Ajustado para um cinza bem claro */
-  --text-color: #222222;
-  --text-heading: #000000;
-  --text-muted: #666666;
-  --block-hover: rgba(0, 0, 0, 0.04);
-  --menu-bg: #ffffff;
-  --menu-border: #e0e0e0;
-  --quote-border: #e0e0e0;
-  --code-bg: #f5f5f5;
-  --divider-color: #eeeeee;
+/* Temas e Variáveis */
+
+/* 1. NORD (Escuro Frio - Minimalista) */
+[data-theme="nord"] {
+  --bg-color: #2e3440;
+  --text-color: #d8dee9;
+  --accent-color: #88c0d0;
+  --input-bg: #3b4252;
 }
+
+/* 2. SEPIA (Modo Leitura - O melhor para digitação) */
+[data-theme="sepia"] {
+  --bg-color: #f4ecd8;
+  --text-color: #433422;
+  --accent-color: #825a2c;
+  --input-bg: #efe4c9;
+}
+
+/* 3. GRUVBOX (Contraste Retrô - Tons de terra) */
+[data-theme="gruvbox"] {
+  --bg-color: #282828;
+  --text-color: #ebdbb2;
+  --accent-color: #fe8019;
+  --input-bg: #3c3836;
+}
+
+/* 4. LIGHT (Claro limpo - Se necessário) */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #2e2e2e;
+  --accent-color: #007acc;
+  --input-bg: #f0f0f0;
+}
+
+/* Aplicação Global */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin: 20px;
+}
+
+input, select {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: var(--accent-color);
+  color: var(--bg-color); /* Inverte para contraste no cabeçalho */
+  padding: 12px;
+}
+
+td {
+  border-bottom: 1px solid var(--accent-color);
+  padding: 10px;
+}
+/* Aplicação das variáveis */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s; /* Suaviza a troca */
+}
+
 
 /* ===== LAYOUT DO APP ===== */
 * { box-sizing: border-box; }

@@ -74,3 +74,4 @@ brnlimpar.addEventListener("click", function(){
     localStorage.removeItem("minhas_reflexoes");
     renderizar()
 })
+
